@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function() {
+            const storedTheme = localStorage.getItem('bas1c-theme') || 'system';
+            document.documentElement.setAttribute('data-theme', storedTheme);
+        })();
+    </script>
+    <meta name="theme-color" content="#050505">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://upload.wikimedia.org; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https://www.youtube.com; media-src 'self' https://www.youtube.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bas1c.Visuals portfolio — offline editing and color grading. Timeline architecture, rhythm mapping, and cinematic finishing based in Delhi, India.">
+    <title>Bas1c.Visuals | Database</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bas1c.Visuals | Database">
+    <meta property="og:description" content="Structural logic applied to raw visual data.">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="assets/Logo.webp" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/Logo.webp">
+    </head>
+<body>
+
+    <div class="loading" id="page-loader">
+    <div class="loading-text">
+        <span class="loading-text-words">L</span>
+        <span class="loading-text-words">O</span>
+        <span class="loading-text-words">A</span>
+        <span class="loading-text-words">D</span>
+        <span class="loading-text-words">I</span>
+        <span class="loading-text-words">N</span>
+        <span class="loading-text-words">G</span>
+    </div>
+</div>
+    <div class="theme-toggle-wrapper" id="theme-toggle">
+    <button class="theme-btn" data-set-theme="light" aria-label="Light Theme">L</button>
+    <button class="theme-btn active" data-set-theme="system" aria-label="System Auto">S</button>
+    <button class="theme-btn" data-set-theme="dark" aria-label="Dark Theme">D</button>
+    <div class="theme-indicator"></div>
+</div>
+    <div class="spotlight-grid"></div>
+    <div id="cursor"></div>
+    <div id="intent-hud"></div>
+
+    <div class="layout-grid">
+        <aside class="sidebar">
+            <div class="brand-header">
+                <img src="assets/Logo.webp" alt="Bas1c.Visuals Avatar" class="brand-avatar" loading="lazy">
+                <div class="brand-info">
+                    <div class="brand-name">Bas1c.Visuals</div>
+                    <div class="brand-title">Offline Editor / Colorist</div>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Overview</a>
+                <a href="work.html" class="nav-link active">Database</a>
+                <a href="contact.html" class="nav-link">Nodes</a>
+                <a href="network.html" class="nav-link">Network</a>
+            </nav>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSduDXGZCUWHftw2VyI1yGoDCRQh9wgXF5pEQPaOI63HoUo8tQ/viewform?embedded=true" target="_blank" class="review-btn">Write a Review</a>
+            <div class="status-module" id="easter-egg-trigger">
+    <div class="status-dot blinking"></div>
+    <span class="system-text">SYSTEM.ONLINE</span>
+</div>
+        </aside>
+
+        <main class="content-area">
+    <section class="reveal-block hero-section">
+        <h1 class="hero-title">Database.</h1>
+        <p class="body-text">Selected visual outputs. Filter by structural category.</p>
+
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="reels">Reels</button>
+            <button class="filter-btn" data-filter="youtube">YouTube</button>
+            <button class="filter-btn" data-filter="wedding">Wedding</button>
+            <button class="filter-btn" data-filter="gaming">Gaming</button>
+            <button class="filter-btn" data-filter="corporate">Corporate</button>
+        </div>
+
+        <div class="gallery-grid">
+
+            <article class="gallery-card" data-category="reels" data-video="https://youtube.com/shorts/iOYpJz5XvV0?feature=share">
+                <div class="card-media"><img src="assets/Thumb_1.webp" alt="File 01" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Product Reel 01</span>
+                    <span class="card-tag">Reels</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="reels" data-video="https://youtube.com/shorts/gVOAzwQZLbY?feature=share">
+                <div class="card-media"><img src="assets/Thumb_2.webp" alt="File 02" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Product Reel 02</span>
+                    <span class="card-tag">Reels</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="reels" data-video="https://youtube.com/shorts/Cttu5ZxhQOU?feature=share">
+                <div class="card-media"><img src="assets/Thumb_2.webp" alt="File 02" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Fast Paced 01</span>
+                    <span class="card-tag">Reels</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="reels" data-video="https://youtube.com/shorts/7dIrqzSuMUQ?feature=share">
+                <div class="card-media"><img src="assets/Thumb_2.webp" alt="File 02" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Fast Paced 02</span>
+                    <span class="card-tag">Reels</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="reels" data-video="https://youtube.com/shorts/EXN8E3R1tao?feature=share">
+                <div class="card-media"><img src="assets/Thumb_2.webp" alt="File 02" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Fast Paced 03</span>
+                    <span class="card-tag">Reels</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="reels" data-video="https://youtube.com/shorts/GU0SbHapnAQ?feature=share">
+                <div class="card-media"><img src="assets/Thumb_2.webp" alt="File 02" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Fast Paced 04</span>
+                    <span class="card-tag">Reels</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="reels" data-video="https://youtube.com/shorts/y3N0NMaW5GE?feature=share">
+                <div class="card-media"><img src="assets/Thumb_2.webp" alt="File 02" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Fast Paced 05</span>
+                    <span class="card-tag">Reels</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="reels" data-video="https://youtube.com/shorts/i-x_ZwQBop4?feature=share">
+                <div class="card-media"><img src="assets/Thumb_2.webp" alt="File 02" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Fast Paced 06</span>
+                    <span class="card-tag">Reels</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="reels" data-video="https://youtube.com/shorts/hSW1GDYTDyg?feature=share">
+                <div class="card-media"><img src="assets/Thumb_2.webp" alt="File 02" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Fast Paced 07</span>
+                    <span class="card-tag">Reels</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="reels" data-video="https://youtube.com/shorts/n6l7fSMPQ9k?feature=share">
+                <div class="card-media"><img src="assets/Thumb_2.webp" alt="File 02" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Fast Paced 08</span>
+                    <span class="card-tag">Reels</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="youtube" data-video="https://youtu.be/[VALID_VIDEO_ID]">
+                <div class="card-media"><img src="assets/Thumb_placeholder.webp" alt="File 03" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Long-Form Archive</span>
+                    <span class="card-tag">YouTube</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="wedding" data-video="INSERT_YOUTUBE_URL_HERE">
+                <div class="card-media"><img src="assets/Thumb_placeholder.webp" alt="File 04" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Ceremony Cut</span>
+                    <span class="card-tag">Wedding</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="gaming" data-video="INSERT_YOUTUBE_URL_HERE">
+                <div class="card-media"><img src="assets/Thumb_placeholder.webp" alt="File 05" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Kinetic Montage</span>
+                    <span class="card-tag">Gaming</span>
+                </div>
+            </article>
+
+            <article class="gallery-card" data-category="corporate" data-video="INSERT_YOUTUBE_URL_HERE">
+                <div class="card-media"><img src="assets/Thumb_placeholder.webp" alt="File 06" loading="lazy"></div>
+                <div class="card-meta">
+                    <span class="card-title">Brand Identity</span>
+                    <span class="card-tag">Corporate</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="global-footer reveal-block">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <span>Bas1c.Visuals</span>
+            <p>Structural logic applied to raw visual data.</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Overview</a>
+            <a href="work.html">Database</a>
+            <a href="contact.html">Nodes</a>
+            <a href="network.html">Network</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/bas1c.visuals/" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@bas1c.visuals" target="_blank">YouTube</a>
+            <a href="mailto:riteshbera2006@gmail.com">Mail</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </div>
+    <div class="pong-arena">
+                    <div class="pong-paddle left"></div>
+                    <div class="pong-ball"></div>
+                    <div class="pong-paddle right"></div>
+                </div>
+            </footer>
+
+</main>
+        
+    </div>
+
+    <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-close" id="lightbox-close">TERMINATE [ESC]</div>
+        <div class="lightbox-content">
+            <iframe id="lightbox-frame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+<div id="easter-egg-modal" class="modal-overlay">
+    <div class="easter-egg-card">
+        <button id="close-modal" class="close-btn">×</button>
+        <div class="ee-subtitle">(Easter Egg)</div>
+        <img src="assets/soooomeeeee.webp" alt="Profile" class="ee-photo" loading="lazy">
+        <h3 class="ee-text">Hello there you found me!</h3>
+    </div>
+</div>
+<button id="scroll-top-btn" aria-label="Scroll to top">↑</button>
+</html>

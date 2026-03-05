@@ -1,0 +1,188 @@
+/* Tablet Constraint */
+@media (max-width: 1024px) {
+    .layout-grid { grid-template-columns: 240px 1fr !important; }
+    .content-area { padding: 32px; }
+}
+
+/* Mobile Constraint - Structural Rebuild */
+@media (max-width: 900px) {
+    .layout-grid { 
+        display: flex !important; 
+        flex-direction: column !important; 
+    }
+    
+    .sidebar { 
+        position: relative !important; 
+        height: auto !important; 
+        border-right: none !important; 
+        border-bottom: 1px solid var(--surface-border) !important; 
+        padding: 24px !important; 
+        display: flex; 
+        flex-direction: column; 
+    }
+    
+    .brand-header { 
+        margin-bottom: 24px !important; 
+        flex-direction: row !important; 
+        align-items: center !important; 
+        justify-content: flex-start; 
+        gap: 16px !important;
+    }
+    
+    .brand-avatar { 
+        width: 48px !important; 
+        height: 48px !important; 
+    }
+
+    .nav-menu { 
+        flex-direction: row !important; 
+        flex-wrap: wrap !important; 
+        gap: 8px !important; 
+        width: 100%; 
+        margin-bottom: 24px;
+    }
+
+    .nav-link { 
+        padding: 8px 12px !important; 
+        font-size: 0.85rem !important; 
+    }
+    
+    .review-btn { 
+        display: flex !important; 
+        width: 100% !important; 
+        margin-top: 16px !important;
+        margin-bottom: 24px !important; 
+        justify-content: center !important;
+    }
+    
+    .status-module { 
+        width: 100%; 
+        justify-content: center; 
+    }
+    
+    .content-area { padding: 24px !important; gap: 32px !important; }
+    .hero-meta { grid-template-columns: 1fr !important; gap: 24px !important; }
+    
+    .quick-stats { 
+        border-left: none !important; 
+        padding-left: 0 !important; 
+        border-top: 1px solid var(--surface-border) !important; 
+        padding-top: 16px !important; 
+        flex-direction: row !important; 
+        flex-wrap: wrap !important; 
+        gap: 16px !important; 
+    }
+    
+    .operations-grid, .about-grid, .gallery-grid, .network-grid { 
+        grid-template-columns: 1fr !important; 
+    }
+
+    .global-footer { 
+        margin: 40px 16px 16px 16px !important;
+        padding: 40px 24px 24px 24px !important; 
+        border-radius: 24px !important;
+        grid-column: 1 / -1 !important;
+        width: auto !important;
+    }
+    
+    .footer-grid { 
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; 
+        gap: 24px !important; 
+        margin-bottom: 24px !important;
+    }
+    
+    .footer-brand { grid-column: 1 / -1 !important; }
+    .footer-brand p { max-width: 100% !important; }
+    
+    .footer-links, .footer-social { 
+        align-items: flex-start !important; 
+        gap: 12px !important; 
+    }
+    
+    .footer-links a, .footer-social a {
+        width: auto !important;
+        padding: 0 !important;
+        border-bottom: none !important;
+    }
+    
+    .footer-bottom { 
+        flex-direction: column !important; 
+        justify-content: center !important;
+        align-items: center !important; 
+        text-align: center !important;
+        gap: 12px !important; 
+    }
+
+    .theme-toggle-wrapper { 
+        bottom: 24px; 
+        right: 24px; 
+    }
+
+    #scroll-top-btn {
+        bottom: 24px;
+        left: 24px;
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile Constraint */
+@media (max-width: 600px) {
+    h1.hero-title, .card-hero { font-size: 2.2rem !important; }
+    p.body-text { font-size: 0.85rem !important; }
+    .contact-card { padding: 24px !important; }
+    .card-email-box { flex-direction: column; align-items: flex-start; }
+    .copy-btn { width: 100%; }
+    .card-socials { flex-direction: column !important; gap: 12px !important; }
+    .morph-pill { flex: none !important; width: 100% !important; height: 48px !important; }
+    
+    .global-footer { 
+        margin: 24px 8px 8px 8px !important;
+        padding: 32px 16px 16px 16px !important; 
+        border-radius: 16px !important;
+    }
+    .footer-grid { gap: 32px !important; grid-template-columns: 1fr !important; }
+    .footer-brand span { font-size: 2rem !important; }
+}
+
+/* Hardware Capability: Touch Device Overrides */
+@media (max-width: 900px), (hover: none) and (pointer: coarse) {
+    #cursor, #intent-hud { display: none !important; }
+    *, *::before, *::after { cursor: auto !important; }
+    .op-card::before, .gallery-card::before, .about-card::before, .social-node-card::before { display: none !important; }
+    body.hover-active #cursor { display: none !important; }
+}
+
+/* Network Card Volumetric Constraints & Viewport Lock */
+@media (max-width: 900px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .card-under-float, .contact-under-float, .brand-particle, .brand-float {
+        height: auto !important;
+        object-fit: contain !important;
+        aspect-ratio: 1 / 1;
+    }
+
+    /* Reduce atmospheric blowout radius */
+    .card-under-float, .contact-under-float {
+        max-width: 45vw !important;
+    }
+
+    /* Recalibrate primary breakout vector */
+    .brand-float {
+        width: 56px !important;
+        height: 56px !important;
+        top: -16px !important;
+        right: -8px !important;
+    }
+    
+    .yt-float {
+        width: 68px !important;
+        height: 56px !important;
+        aspect-ratio: auto;
+    }
+}
